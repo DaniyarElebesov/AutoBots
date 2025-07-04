@@ -1,4 +1,4 @@
 package com.autobots.summer;
 
-public class Sun  {
+public class Lake {
 }
