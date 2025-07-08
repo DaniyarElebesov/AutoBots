@@ -13,13 +13,13 @@ public class StreamApiLesson {
     public static void main(String[] args) {
 
         List<String> names = List.of("Anna", "Bob", "Alex", "Bella", "Andrew");
-//
-////        for (String name : names){
-////            if (name.startsWith("A")){
-////                System.out.println(name);
-////            }
-//
-//
+
+//        for (String name : names){
+//            if (name.startsWith("A")){
+//                System.out.println(name);
+//            }
+
+
         List<String> result = names.stream()
                 .filter(name -> name.startsWith("A"))
                 .map(String::toUpperCase)
@@ -27,7 +27,7 @@ public class StreamApiLesson {
                 .collect(Collectors.toList());
 
         System.out.println(result);
-//
+
 //        List<Integer> numbers = List.of(1,2,3,4,5,6);
 //        int r1 = 0;
 //        for (int num : numbers){
