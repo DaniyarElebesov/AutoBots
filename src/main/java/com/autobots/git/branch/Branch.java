@@ -1,4 +1,4 @@
-package com.autobots.git.branch;
+package com.autobots.git;
 
 public class Branch {
     public static void main(String[] args) {
