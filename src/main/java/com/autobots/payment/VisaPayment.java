@@ -1,5 +1,8 @@
 package com.autobots.payment;
 
 public class VisaPayment {
-    //asdadaa
+
+    public void payByVisaCard(double amount){
+        System.out.println("payment by Visa Card");
+    }
 }
