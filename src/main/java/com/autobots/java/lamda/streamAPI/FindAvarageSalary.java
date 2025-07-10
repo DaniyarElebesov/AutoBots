@@ -22,18 +22,18 @@ public class FindAvarageSalary {
         );
 
 
-        Map<String, Double> avargageSalaryByDep = new HashMap<>();
-        Map<String, Integer> avarageByDep = new HashMap<>();
+        Map<String, Double> averageSalaryByDep = new HashMap<>();
+        Map<String, Integer> averageByDep = new HashMap<>();
         int count = 0;
         for (Employee employee : employees) {
-            avargageSalaryByDep.put(employee.getDepartment(), avargageSalaryByDep.getOrDefault(employee.getDepartment(), 0.0) + employee.getSalary());
-            avarageByDep.put(employee.getDepartment(), avarageByDep.getOrDefault(employee.getDepartment(), 0) + 1);
+            averageSalaryByDep.put(employee.getDepartment(), averageSalaryByDep.getOrDefault(employee.getDepartment(), 0.0) + employee.getSalary());
+            averageByDep.put(employee.getDepartment(), averageByDep .getOrDefault(employee.getDepartment(), 0) + 1);
         }
 
         double avarageSal = 0.0;
 
-        for (String dep : avargageSalaryByDep.keySet()) {
-            avarageSal = avargageSalaryByDep.get(dep) / avarageByDep.get(dep);
+        for (String dep : averageSalaryByDep.keySet()) {
+            avarageSal = averageSalaryByDep.get(dep) / averageByDep.get(dep);
             System.out.printf("%s -> $%.2f%n", dep, avarageSal);
         }
         System.out.println("___________________________");
@@ -41,8 +41,8 @@ public class FindAvarageSalary {
         Map<String, Double> avarSalaryByDepWithStream = employees.stream()
                 .collect(Collectors.groupingBy(Employee::getDepartment,
                         Collectors.averagingDouble(Employee::getSalary)));
-        avarSalaryByDepWithStream.forEach((dep, avarSalary) ->
-        System.out.println(dep + " -> $" + avarSalary));
+        avarSalaryByDepWithStream.forEach((dep, averageSalary) ->
+        System.out.println(dep + " -> $" + averageSalary));
 
         System.out.println("___________________________");
 

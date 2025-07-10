@@ -1,6 +1,6 @@
-package com.autobots.git2;
+package com.autobots.car;
 
-public class Git3 {
+public class BMW {
     public static void main(String[] args) {
 
     }
